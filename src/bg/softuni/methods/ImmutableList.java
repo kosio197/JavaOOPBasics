@@ -6,23 +6,21 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class ImmutableList {
-    static class ImmutableList{
 
-        private List<Integer> ints;
+    private List<Integer> ints;
 
-        public ImmutableList() {
-            ints = new ArrayList<>();
-        }
+    public ImmutableList() {
+        ints = new ArrayList<>();
+    }
 
-        public ImmutableList(List<Integer> ints) {
-            this();
-            ints.addAll(ints);
+    public ImmutableList(List<Integer> ints) {
+        this();
+        ints.addAll(ints);
 
-        }
+    }
 
-        public ImmutableList getArray() {
-            return new ImmutableList(ints);
-        }
+    public ImmutableList getArray() {
+        return new ImmutableList(ints);
     }
 
     public static void main(String[] args) {
